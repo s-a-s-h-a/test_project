@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fast_article.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @fast_article.content %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @fast_article.short_description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @fast_article.author %>
+</p>
+
+<%= link_to 'Edit', edit_fast_article_path(@fast_article) %> |
+<%= link_to 'Back', fast_articles_path %>

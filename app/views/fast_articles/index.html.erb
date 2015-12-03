@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fast Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Short description</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fast_articles.each do |fast_article| %>
+      <tr>
+        <td><%= fast_article.name %></td>
+        <td><%= fast_article.content %></td>
+        <td><%= fast_article.short_description %></td>
+        <td><%= fast_article.author %></td>
+        <td><%= link_to 'Show', fast_article %></td>
+        <td><%= link_to 'Edit', edit_fast_article_path(fast_article) %></td>
+        <td><%= link_to 'Destroy', fast_article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fast article', new_fast_article_path %>
